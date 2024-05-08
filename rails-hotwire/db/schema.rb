@@ -19,16 +19,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_16_030624) do
     t.index ["todo_id"], name: "index_comments_on_todo_id"
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.integer "todo_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["todo_id"], name: "index_likes_on_todo_id"
-  end
-
   create_table "todos", force: :cascade do |t|
     t.string "description"
-    t.boolean "completed", default: false
+    t.boolean "completed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

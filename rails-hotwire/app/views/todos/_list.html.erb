@@ -1,4 +1,4 @@
-<%= turbo_frame_tag 'todos_list' do %>
+<%= turbo_frame_tag 'todos_list' do %> <!-- Ce qui permet au formulaire de trouver la frame -->
   <%= render 'todos/tabs' %>
 
   <% if @todos.present? %>
